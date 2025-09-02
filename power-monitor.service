@@ -1,0 +1,24 @@
+[Unit]
+Description=Power Management Monitor Service
+After=tlp.service
+Wants=tlp.service
+
+[Service]
+Type=simple
+User=diego-nogueira
+Group=diego-nogueira
+ExecStart=/home/diego-nogueira/power-management/scripts/power-monitor.sh start
+ExecStop=/home/diego-nogueira/power-management/scripts/power-monitor.sh stop
+Restart=always
+RestartSec=10
+
+# Environment
+Environment=DISPLAY=:0
+Environment=XDG_RUNTIME_DIR=/run/user/1000
+
+# Security
+NoNewPrivileges=true
+PrivateTmp=true
+
+[Install]
+WantedBy=multi-user.target

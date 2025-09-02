@@ -1,0 +1,63 @@
+# =============================================================================
+# Power Management System - Git Ignore
+# =============================================================================
+
+# Log files
+logs/*.log
+*.log
+*.log.*
+
+# Temporary files
+*.tmp
+*.temp
+*~
+.#*
+
+# Backup files
+*.bak
+*.backup
+*.orig
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# System configuration backups (sensitive)
+backups/system-configs/
+configs/sensitive/
+
+# Runtime state files
+*.pid
+*.state
+
+# Test output
+test-results/
+coverage/
+
+# Local configuration overrides
+local-config/
+*.local.conf
+
+# Hardware-specific generated files (keep templates)
+profiles/*.generated
+!profiles/*.template
+
+# Installation logs
+install-*.log
+uninstall-*.log
+
+# Cache directories
+cache/
+.cache/
